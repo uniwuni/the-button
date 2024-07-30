@@ -1,0 +1,11 @@
+[Unit]
+Description=IRIScan Desk 5 Pro Button watcher
+
+[Service]
+ExecStart=%h/.local/bin/the-button
+# Restart=always
+# RestartSec=30
+Type=simple
+
+[Install]
+WantedBy=default.target

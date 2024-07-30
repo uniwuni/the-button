@@ -1,0 +1,7 @@
+# support for the IRIScan Desk 5 Pro button
+
+the button for this thing seems to be recognized as a hid device but not as anything useful.
+so this uses udev rules and a systemd service to automatically run ~/.local/bin/button-pressed whenever, uh, the button is pressed. thank you very much
+
+`make install` installs the user-wide stuff, `make install-rules` installs the udev rules (needs root). fair warning i have no clue how any of this shit works maybe be a bit careful
+and actually take a look first thank you!!!!
