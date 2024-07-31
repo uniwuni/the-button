@@ -1,0 +1,2 @@
+#!/bin/bash
+fswebcam -d /dev/video0 -r 4032x3024 --loop 100000 --webp 70 --save ~/current-scan-project/%Y-%m-%d_%H:%M:%S.webp --exec "~/.local/bin/button-light off"

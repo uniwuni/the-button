@@ -1,0 +1,6 @@
+#!/bin/bash
+#
+# Example configuration for what to do with the button
+~/.local/bin/button-light on
+killall -SIGUSR1 fswebcam || { ~/.local/bin/button-light off; false; } && kdialog --title "Picture taken" --passivepopup "" 1
+# ~/.local/bin/button-light off

@@ -1,7 +1,12 @@
 # support for the IRIScan Desk 5 Pro button
 
 the button for this thing seems to be recognized as a hid device but not as anything useful.
-so this uses udev rules and a systemd service to automatically run ~/.local/bin/button-pressed whenever, uh, the button is pressed. thank you very much
+so this uses udev rules and a systemd service to automatically run ~/.local/bin/button-pressed whenever, uh, the button is pressed. thank you very much.
+we need to exec a new process on every press since this is substantially easier than reconnecting the button file descriptor every time, which needs to be done because it gets invalidated whenever we change something with the lights 
+
+`button-light [on|off]` sends 32 raw bytes to turn the light on the thing on or off, it is pretty hacky and based on the usbmon output from the windows tool
+
 
 `make install` installs the user-wide stuff, `make install-rules` installs the udev rules (needs root). fair warning i have no clue how any of this shit works maybe be a bit careful
 and actually take a look first thank you!!!!
+
