@@ -10,3 +10,4 @@ we need to exec a new process on every press since this is substantially easier 
 `make install` installs the user-wide stuff, `make install-rules` installs the udev rules (needs root). fair warning i have no clue how any of this shit works maybe be a bit careful
 and actually take a look first thank you!!!!
 
+`start-scanning` initializes a fswebcam process that makes `button-pressed` take a picture and make the button glow as long as it is not ready to take another one. hope you like it
