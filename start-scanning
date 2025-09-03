@@ -1,2 +1,2 @@
 #!/bin/bash
-fswebcam -d /dev/video0 -r 4032x3024 --loop 100000 --webp 70 --save ~/current-scan-project/%Y-%m-%d_%H:%M:%S.webp --exec "~/.local/bin/button-light off"
+fswebcam -d /dev/v4l/by-id/usb-Mysher_Tech_IRIScan_Desk_5_Pro_Version1.0-video-index0 -r 4032x3024 --loop 100000 --jpeg 80  --exec "~/.local/bin/button-light off" --save ~/current-scan-project/%Y-%m-%d_%H:%M:%S.jpeg

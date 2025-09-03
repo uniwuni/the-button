@@ -25,7 +25,6 @@
 
 void reconnect(int *fevdev) {
     errno = 0;
-    usleep(300000);
     close(*fevdev);
     errno = 0;
     *fevdev = open("/dev/button", O_RDONLY | O_NONBLOCK);
@@ -67,7 +66,7 @@ int main(int argc, char* argv[])
                 printf("Error reading event.\n");
                 exit(1);
             }
-            if(b < 512) {
+            if(b < 64) {
                printf("Failed to read event %d.\n", b);
                 exit(1);
             }
